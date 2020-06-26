@@ -1,0 +1,9 @@
+pc_sel  <=  ;
+Op1Sel  <=  ;
+Op2Sel  <=  ;
+AluFun  <=  ;
+mem_rw  <=  ;
+mem_val <=  ;
+wb_sel  <=  ;
+wa_sel  <=  ;
+rf_wen  <=  ;

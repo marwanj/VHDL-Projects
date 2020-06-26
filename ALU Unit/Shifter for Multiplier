@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+--use ieee.numeric_std.all;
+
+entity shifter is
+port(inputt:in std_logic_vector (7 downto 0);
+      shiftextent:in integer ;
+   outt :OUT STD_LOGIC_VECTOR(15 downto 0));
+end shifter;
+
+
+architecture shifter_art of shifter is
+
+begin
+
+g1: for b in 0 to 7 generate
+  outt(b+shiftextent)<= inputt(b);
+  end generate;
+g2: for c in shiftextent to 15 generate
+outt(c)<='0';
+end generate;
+g3: for d in 0 to shiftextent generate
+outt(d)<='0';
+end generate;
+
+end shifter_art;

@@ -1,0 +1,23 @@
+first: process(X,Y)
+begin
+for b in 7 downto 0 loop
+  if (notdifferentarray(b)='0') then
+    bool<=zerooronearray(b);
+    exit;
+  end if;
+end loop;
+
+for b in 8 to 15 loop
+  S(b)<= '0';
+end loop;
+
+if (bool='1') then
+  for b in 0 to 7 loop
+    S(b)<= Y(b);
+  end loop;
+else
+  for b in 0 to 7 loop
+    S(b)<= X(b);
+  end loop;
+end if;
+end process first;
